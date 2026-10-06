@@ -4,7 +4,7 @@ from typing import Any
 
 import httpx
 
-from models import QuestRequest
+from backend.models import QuestRequest
 
 
 SYSTEM_PROMPT = """
