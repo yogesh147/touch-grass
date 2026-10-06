@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+            name="theme-color"
+            content="#102a1b"
+    >
+
+    <meta
+            name="description"
+            content="AI-powered tiny outdoor adventures."
+    >
+
+    <title>Touch Grass 🌱</title>
+
+    <link
+            rel="manifest"
+            href="/manifest.json"
+    >
+
+    <link
+            rel="stylesheet"
+            href="/static/style.css"
+    >
+
+</head>
+
+<body>
+
+<main class="app">
+
+    <!-- HOME -->
+
+    <section
+            id="home"
+            class="screen"
+    >
+
+        <div class="logo">🌱</div>
+
+        <div class="eyebrow">
+            AI FOR GOING OUTSIDE
+        </div>
+
+        <h1>
+            Touch<br>
+            Grass.
+        </h1>
+
+        <p class="subtitle">
+            Tell me how much time you have.
+            I'll give you a tiny adventure.
+        </p>
+
+        <div class="time-label">
+            I HAVE
+        </div>
+
+        <div
+                id="timePicker"
+                class="time-picker"
+        >
+
+            <button
+                    type="button"
+                    data-time="15"
+            >
+                15 min
+            </button>
+
+            <button
+                    type="button"
+                    data-time="30"
+                    class="selected"
+            >
+                30 min
+            </button>
+
+            <button
+                    type="button"
+                    data-time="60"
+            >
+                60 min
+            </button>
+
+        </div>
+
+        <button
+                id="gemmaButton"
+                class="primary-button"
+                type="button"
+        >
+            <span>✨</span>
+            CREATE WITH GEMMA
+        </button>
+
+        <button
+                id="offlineButton"
+                class="offline-button"
+                type="button"
+        >
+            <strong>📱 OFFLINE DEMO</strong>
+            <span>No internet • No AI needed</span>
+        </button>
+
+        <p class="privacy-note">
+            Your quest is saved on this device.
+        </p>
+
+    </section>
+
+
+    <!-- QUEST -->
+
+    <section
+            id="quest"
+            class="screen"
+            hidden
+    >
+
+        <div class="top-row">
+
+            <button
+                    id="backButton"
+                    class="icon-button"
+                    type="button"
+                    aria-label="Go back"
+            >
+                ←
+            </button>
+
+            <div
+                    id="modeBadge"
+                    class="mode-badge"
+            >
+                ✨ GEMMA
+            </div>
+
+        </div>
+
+        <div class="quest-meta">
+            YOUR QUEST
+        </div>
+
+        <h2 id="questTitle">
+            Your adventure
+        </h2>
+
+        <div
+                id="questTime"
+                class="quest-duration"
+        >
+            30 MIN
+        </div>
+
+        <div id="steps"></div>
+
+        <button
+                id="startAdventureButton"
+                class="primary-button"
+                type="button"
+        >
+            START ADVENTURE
+        </button>
+
+    </section>
+
+
+    <!-- ADVENTURE -->
+
+    <section
+            id="adventure"
+            class="screen adventure-screen"
+            hidden
+    >
+
+        <div class="big-nature-icon">
+            🌳
+        </div>
+
+        <div class="adventure-eyebrow">
+            QUEST STARTED
+        </div>
+
+        <h2>
+            Phone away.
+        </h2>
+
+        <p>
+            Go do the thing.
+        </p>
+
+        <div class="adventure-rule">
+            The best part of this app<br>
+            is not using it.
+        </div>
+
+        <button
+                id="foundSomethingButton"
+                class="secondary-button"
+                type="button"
+        >
+            📷 I FOUND SOMETHING
+        </button>
+
+        <button
+                id="finishButton"
+                class="text-button"
+                type="button"
+        >
+            Finish quest
+        </button>
+
+    </section>
+
+
+    <!-- FOUND SOMETHING -->
+
+    <section
+            id="found"
+            class="screen"
+            hidden
+    >
+
+        <div class="big-nature-icon">
+            🔎
+        </div>
+
+        <div class="adventure-eyebrow">
+            NICE FIND
+        </div>
+
+        <h2>
+            Keep looking.
+        </h2>
+
+        <p>
+            Notice one more thing around you
+            before returning to your phone.
+        </p>
+
+        <div class="observation-card">
+            <span>👀</span>
+
+            <div>
+                <strong>Observation challenge</strong>
+
+                <p>
+                    Find something nearby that
+                    you didn't notice when you arrived.
+                </p>
+            </div>
+        </div>
+
+        <button
+                id="backToAdventureButton"
+                class="primary-button"
+                type="button"
+        >
+            PHONE AWAY AGAIN
+        </button>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section
+            id="complete"
+            class="screen adventure-screen"
+            hidden
+    >
+
+        <div class="big-nature-icon">
+            🌱
+        </div>
+
+        <div class="adventure-eyebrow">
+            QUEST COMPLETE
+        </div>
+
+        <h2>
+            You touched grass.
+        </h2>
+
+        <p>
+            Mission accomplished.
+        </p>
+
+        <button
+                id="newQuestButton"
+                class="primary-button"
+                type="button"
+        >
+            ANOTHER ADVENTURE
+        </button>
+
+    </section>
+
+
+    <!-- TOAST -->
+
+    <div
+            id="toast"
+            class="toast"
+            role="status"
+            aria-live="polite"
+    ></div>
+
+</main>
+
+<script src="/static/demo-data.js"></script>
+<script src="/static/app.js"></script>
+
+</body>
+</html>
