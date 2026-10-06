@@ -5,8 +5,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
-from models import QuestRequest
-from planner import generate_quest
+from backend.models import QuestRequest
+from backend.planner import generate_quest
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
